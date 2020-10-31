@@ -1,0 +1,24 @@
+<div *ngIf="tableData">
+  <table class="table table-bordered" #table>
+    <thead>
+    <tr>
+      <td>
+        <app-basic-cell [cellData]="getRowColHeaderCell()"></app-basic-cell>
+      </td>
+      <td *ngFor="let colHeader of tableData.colHeaderArr">
+        <app-basic-cell [cellData]="colHeader"></app-basic-cell>
+      </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of tableData.rowHeaderArr">
+      <td>
+        <app-basic-cell [cellData]="row"></app-basic-cell>
+      </td>
+      <td *ngFor="let column of tableData.colHeaderArr">
+        <app-basic-cell [cellData]="getCellData(row.row, column.col)"></app-basic-cell>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

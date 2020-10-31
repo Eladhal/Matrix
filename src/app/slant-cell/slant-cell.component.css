@@ -1,0 +1,10 @@
+.cellBack {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 1px, transparent .25em ,
+    #C8C8C8 calc(.25em + 1px), #C8C8C8 .85em
+  );
+
+  height: 60px;
+  width: 100%;
+}

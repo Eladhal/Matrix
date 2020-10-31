@@ -1,0 +1,7 @@
+<div *ngIf="cellData" class="baseCell" [ngStyle]="{'background': cellData.color}"  #cellRef>
+  <app-row-col-header *ngIf ="getCellType() === 'rowColHeader'"></app-row-col-header>
+  <app-header-cell *ngIf ="getCellType() === 'header'" [cellData]="cellData" ></app-header-cell>
+  <app-source-cell *ngIf ="getCellType() === 'source'" [cellData]="cellData"></app-source-cell>
+  <app-info-cell *ngIf ="getCellType() === 'info'" [cellData]="cellData"></app-info-cell>
+  <app-slant-cell *ngIf ="getCellType() === 'slant'" [cellData]="cellData"></app-slant-cell>
+</div>

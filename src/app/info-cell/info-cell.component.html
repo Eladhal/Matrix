@@ -1,0 +1,16 @@
+<div class="cont">
+  <div class="percentageBar">
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" [ngStyle]="{'width': successWidth}"  aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-danger" role="progressbar" [ngStyle]="{'width': warningWidth}" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  <div class="percentage">
+    <i class="far fa-file-alt"></i>
+    <span class="marginFromIconSuccess">{{successWidth}}</span>
+  </div>
+  <div class="vCount">
+    <i class="fas fa-radiation"></i>
+    <span class="marginFromIconViol">{{cellData.violationsCount}}</span>
+  </div>
+</div>
